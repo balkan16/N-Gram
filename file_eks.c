@@ -10,8 +10,8 @@ typedef struct node {
 }file_tubes;
 
 //fungsi-fungsi yg dipakai
-void inputfile(file_tubes *f);
-void filedinamic(FILE *file, file_tubes *current, char temp[100]);
+void inputfile(file_tubes *f, char *namafile);
+void filedinamic(FILE *file, file_tubes *current, char *temp);
 void printlist(file_tubes *f); //hanya untuk uji coba
 
 //program utama
@@ -21,23 +21,21 @@ int main(){
 	/*
 	* file_tubes *f;
 	* f =(file_tubes*) malloc(sizeof(file_tubes));
-    	* inputfile(f);
+    	* openfile(f, namafile);
     	*/
     
 	//printlist(f); // buat ngecek doang
 	return 0;
 }
 
-//fungsi input file
-void inputfile(file_tubes *f){
+//fungsi open file
+void openfile(file_tubes *f, char *namafile){
 	file_tubes *current = f;
 	char temp[150];
 	FILE *file;
 	
-	//input nama file
-	printf("masukkan nama file referensi : ");
-	scanf("%s", temp);
-	file = fopen(temp, "r");
+	//open file
+	file = fopen(namafile, "r");
 	
 	if (file == NULL) { //jika file tidak ada
 		printf("error!! file tidak ditemukan!\n");
@@ -51,7 +49,7 @@ void inputfile(file_tubes *f){
 }
 
 //fungsi menyimpan isi file dalam dinamic array
-void filedinamic(FILE *file, file_tubes *current, char temp[100]){
+void filedinamic(FILE *file, file_tubes *current, char *temp){
 	int i, j=0, k, p, q;
 	char temp2[150];
 	const char s[2] = " ";
