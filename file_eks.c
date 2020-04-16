@@ -1,3 +1,4 @@
+//library yang dibutuhkan
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -11,7 +12,7 @@ typedef struct node {
 //fungsi-fungsi yg dipakai
 void inputfile(file_tubes *f);
 void filedinamic(FILE *file, file_tubes *current, char temp[100]);
-void printlist(file_tubes *f);
+void printlist(file_tubes *f); //hanya untuk uji coba
 
 //program utama
 int main(){
@@ -20,8 +21,8 @@ int main(){
 	/*
 	* file_tubes *f;
 	* f =(file_tubes*) malloc(sizeof(file_tubes));
-    * inputfile(f);
-    */
+    	* inputfile(f);
+    	*/
     
 	//printlist(f); // buat ngecek doang
 	return 0;
@@ -40,7 +41,7 @@ void inputfile(file_tubes *f){
 	
 	if (file == NULL) { //jika file tidak ada
 		printf("error!! file tidak ditemukan!\n");
-		strcpy(current->data, " ");
+		current->data[0] = 0;
 		current->next = NULL;
 	}
 	else {
@@ -122,5 +123,4 @@ void printlist(file_tubes *f){
         printf("%s\n", current->data);
         current=current->next;
     }
-    printf("done");
 }
