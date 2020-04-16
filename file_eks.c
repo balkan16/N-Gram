@@ -31,7 +31,7 @@ int main(){
 //fungsi open file
 void openfile(file_tubes *f, char *namafile){
 	file_tubes *current = f;
-	char temp[150];
+	char temp[5000];
 	FILE *file;
 	
 	//open file
@@ -51,11 +51,11 @@ void openfile(file_tubes *f, char *namafile){
 //fungsi menyimpan isi file dalam dinamic array
 void filedinamic(FILE *file, file_tubes *current, char *temp){
 	int i, j=0, k, p, q;
-	char temp2[150];
+	char temp2[5000];
 	const char s[2] = " ";
 	
 	while (feof(file)==0){ //jika isi sudah dibaca semua
-		fgets(temp,150,file); //mengambil 1 baris (yg dipisahkan enter (\n)), asumsi maksimal 1 baris 150 karakter
+		fgets(temp,5000,file); //mengambil 1 baris (yg dipisahkan enter (\n)), asumsi maksimal 1 baris 5000 karakter
 		j = strlen(temp); //panjang 1 baris yang diambil
 		k = 0; p = 0; q = 0;
 		
@@ -73,7 +73,7 @@ void filedinamic(FILE *file, file_tubes *current, char *temp){
 			}
 			else if (temp[i] == '\n'){
 				temp[i] = 0;
-				if (i == 0){ //jika ada double \n atau pemisahan paragraf
+				if (k == 0){ //jika ada double \n atau pemisahan paragraf
 					p = 1;
 				}
 			}
@@ -108,7 +108,7 @@ void filedinamic(FILE *file, file_tubes *current, char *temp){
 		}
 		
 		for (i=0;i<j;i++){ 
-			temp[i] = 0; //membersihkan isi temp aga jika sewaktu-waktu isi baris kosong tempnya juga kosong
+			temp[i] = 0; //membersihkan isi temp jika sewaktu-waktu isi baris kosong tempnya juga kosong
 		}
 	}
 }
