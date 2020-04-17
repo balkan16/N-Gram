@@ -11,8 +11,6 @@ struct node {
 };
 */
 
-//asumsi ini variable global
-//struct node *start=NULL;
 
 void display(struct node *start,int N,int Ngram)
 {
