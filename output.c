@@ -47,7 +47,6 @@ void display(int N,int Ngram)
 
 	//untuk mengakses key secara random
 	k = rand()%count;
-	printf("node ke : %d\n", k);
 	int i=0;
 	int j;
 
