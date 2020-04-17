@@ -73,7 +73,7 @@ void filedinamic(FILE *file, file_tubes *current, char *temp){
 			}
 			else if (temp[i] == '\n'){
 				temp[i] = 0;
-				if (k == 0){ //jika ada double \n atau pemisahan paragraf
+				if (q == 0){ //jika ada double \n atau pemisahan paragraf
 					p = 1;
 				}
 			}
