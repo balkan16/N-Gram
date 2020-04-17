@@ -39,7 +39,7 @@ void display(struct node *start,int N,int Ngram)
 			ptrls = ptrls->go;
 			count++;
 		}
-		printf("\nCount \t:%d\n", count);
+		
 
 	current = start;
 
