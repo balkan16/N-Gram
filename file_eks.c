@@ -50,14 +50,14 @@ void openfile(file_tubes *f, char *namafile){
 
 //fungsi menyimpan isi file dalam dinamic array
 void filedinamic(FILE *file, file_tubes *current, char *temp){
-	int i, j=0, k, p, q;
+	int i, j, k, p, q;
 	char temp2[5000];
 	const char s[2] = " ";
 	
 	while (feof(file)==0){ //jika isi sudah dibaca semua
+		j = 0; k = 0; p = 0; q = 0;
 		fgets(temp,5000,file); //mengambil 1 baris (yg dipisahkan enter (\n)), asumsi maksimal 1 baris 5000 karakter
 		j = strlen(temp); //panjang 1 baris yang diambil
-		k = 0; p = 0; q = 0;
 		
 		for (i=0;i<j;i++){
 			if (temp[i] == '\t'){ //jika ada tab diubah menjadi spasi
