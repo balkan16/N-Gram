@@ -9,7 +9,7 @@
 void deskripsi()
 {
 	printf("=======================================");
-	printf(" >>>>>>>RANDOM STRINGS FROM WORDS N-GRAM<<<<<<< ");
+	printf(" >>>>>>>WORDS GUESSING FROM WORDS N-GRAM<<<<<<< ");
 	printf("=================================\n\n");
 	printf(" Deskripsi Program: \n\n");
 	printf(" Program akan memberikan keluaran berupa string acak yang didapat dari\n membuat n-gram dari inputan file eksternal yang berupa text.");
