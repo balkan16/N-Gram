@@ -117,7 +117,7 @@ void filedinamic(FILE *file, file_tubes *current, char *temp){
 void printlist(file_tubes *f){
     file_tubes *current=f;
 
-    while(current != NULL && current->data[0] != 0){ //sampai data terbaca semua atau data terakhir adalah data kosong yg diakibatkan pengolahan sebelumnya
+    while(current->data[0] != 0){ //sampai data terbaca semua atau data terakhir adalah data kosong yg diakibatkan pengolahan sebelumnya
         printf("%s\n", current->data);
         current=current->next;
     }
