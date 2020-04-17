@@ -62,7 +62,7 @@ void display(int N,int Ngram)
     		j=0;
     		printf("%s ", current->key);
     		//menghitung banyaknya value dalam satu node
-    		while(strlen(current->value[j]) && (j<10))
+    		while(strlen(current->value[j]) && (j<20))
     		{
     			coval++;
     			j++;
@@ -109,7 +109,7 @@ void display(int N,int Ngram)
     			printf("%s ", current->key);
     			coval =0;
     			j=0;
-    			while(strlen(current->value[j]) && (j<10))
+    			while(strlen(current->value[j]) && (j<20))
     			{
     				coval++;
     				j++;
