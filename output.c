@@ -38,7 +38,6 @@ void display(int N,int Ngram)
 		count =0;
 		while(ptrls != NULL)
 		{
-			printf("\nkey\t: %s", ptrls->key);
 			ptrls = ptrls->go;
 			count++;
 		}
