@@ -10,10 +10,10 @@ void deskripsi()
 	printf(" >>>>>>>RANDOM STRINGS FROM WORDS N-GRAM<<<<<<< ");
 	printf("=================================\n\n");
 	printf(" Deskripsi Program: \n\n");
-	printf(" Program akan memberikan keluaran berupa string acak yang didapat dari\n membuat n-gram dari inputan file eksternal yang berupa text.");
-	printf("Input dari\n program ini akan berupa, file ekstenal berupa text, n yang berupa bi-\n langan dalam pengamabilan n kata dan N kata acak yang diambil dari kata\n yang terbentuk dari n-gram.");
-	printf(" Program akan kembali meminta jumlah kata ran-\n dom setelah memberikan keluaran. Jika pengguna tidak ingin memberikan\n masukan, program akan beralih ke pemilihan file referensi.");
-	printf("Jika pengguna\n tidak ingin mengganti file referensi, program akan berakhir.");
+	printf(" Program akan memberikan keluaran berupa string acak yang didapat dari\n membuat n-gram dari inputan file eksternal yang berupa text. Lalu memilih\n kata selanjutnya dari value yang terbentuk.");
+	printf("Input dari program ini akan berupa,\n file ekstenal berupa text, n yang berupa bilangan dalam pengamabilan n kata\n dan N kata yang diambil dari kata yang terbentuk dari n-gram.");
+	printf(" Pengguna dapat\n memberikan masukan jumlah kata setelah program memberikan keluaran. Jika\n pengguna tidak ingin memberikan masukan, pengguna dapat mengganti file referensi.");
+	printf("\n Jika pengguna tidak ingin mengganti file referensi, program akan berakhir.");
 	printf("\n-----------------------------------------------------------------------------");
 }
 
